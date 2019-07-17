@@ -1,0 +1,28 @@
+body{
+    background-color: #235668;
+    .chapitre{
+        width:90%;
+        margin:40px auto;
+        background-color: antiquewhite;
+        .content{
+            background-color: #353835;
+            margin:20px;
+            color:white;
+            text-align: center;
+            padding:20px;
+        }
+        h2{
+            padding-top:20px;
+            color:#98a1c6;
+            font-size: 40px;
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+}

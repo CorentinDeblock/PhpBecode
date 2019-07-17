@@ -1,0 +1,36 @@
+body {
+  background-color: #235668;
+}
+
+body .chapitre {
+  width: 90%;
+  margin: 40px auto;
+  background-color: antiquewhite;
+}
+
+body .chapitre .content {
+  background-color: #353835;
+  margin: 20px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+body .chapitre h2 {
+  padding-top: 20px;
+  color: #98a1c6;
+  font-size: 40px;
+  text-align: center;
+}
+
+body .chapitre h3 {
+  text-align: center;
+}
+
+body .chapitre .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+/*# sourceMappingURL=style.css.map */
