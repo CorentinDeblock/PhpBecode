@@ -33,4 +33,8 @@ body .chapitre .container {
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+body .margin {
+  padding: 10px;
+}
 /*# sourceMappingURL=style.css.map */
