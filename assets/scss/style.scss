@@ -4,6 +4,7 @@ body{
         width:90%;
         margin:40px auto;
         background-color: antiquewhite;
+        border-radius: 2pc;
         .content{
             background-color: #353835;
             margin:20px;
@@ -27,5 +28,35 @@ body{
     }
     .margin{
         padding:10px;
+    }
+    .link{
+        color:white;
+        text-decoration: none;
+    }
+    .link:hover{
+        color:#a1c2b6 !important;
+    }
+    .link:active{
+        color:#96a156 !important;
+    }
+    .space-top{
+        display:block;
+        margin-top:10px !important;
+    }
+    thead th,tbody td{
+        border: 1px solid white;
+        padding:5px;
+    }
+    thead th{
+        background-color:white;
+        color:black;
+    }
+    caption{
+        color:black;
+        background-color:white;
+        padding:5px;
+    }
+    .calendar{
+        margin-top:20px;
     }
 }

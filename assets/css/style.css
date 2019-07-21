@@ -6,6 +6,7 @@ body .chapitre {
   width: 90%;
   margin: 40px auto;
   background-color: antiquewhite;
+  border-radius: 2pc;
 }
 
 body .chapitre .content {
@@ -36,5 +37,43 @@ body .chapitre .container {
 
 body .margin {
   padding: 10px;
+}
+
+body .link {
+  color: white;
+  text-decoration: none;
+}
+
+body .link:hover {
+  color: #a1c2b6 !important;
+}
+
+body .link:active {
+  color: #96a156 !important;
+}
+
+body .space-top {
+  display: block;
+  margin-top: 10px !important;
+}
+
+body thead th, body tbody td {
+  border: 1px solid white;
+  padding: 5px;
+}
+
+body thead th {
+  background-color: white;
+  color: black;
+}
+
+body caption {
+  color: black;
+  background-color: white;
+  padding: 5px;
+}
+
+body .calendar {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
