@@ -1,11 +1,10 @@
 <?php 
 @include("../dependance/framework.php");
-@include("../dependance/setLanguage.php");
-
-setlocale(LC_ALL,Language::$language);
 
 $dayWeek = array();
 $month = date("m",time())  + 1;
+
+$actualDay = date("d",time());
 
 function getTime($month,$year){
     return strftime("%B %G",mktime(0,0,0,$month,0,$year));
@@ -70,7 +69,10 @@ for($i = 0; $i < 7*(5 + $addLine);$i++){
     
     if($start){
         $starter++;
-        $tr->addContent(createElement("td",$starter));
+        $td = new Element("td",$starter);
+        if($starter == $actualDay)
+            $td->addAttribute("class","select");
+        $tr->addContent($td->getFullContent());
     }
     else
         $tr->addContent(createElement("td",""));
