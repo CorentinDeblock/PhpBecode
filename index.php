@@ -406,6 +406,16 @@
             </div>
         </div>
     </div>
+    <div class="chapitre bonus">
+        <h2>Bonus</h2>
+        <div class="container">
+            <div class="exercice">
+                <div class="content" id="pagination">
+					<?php @include("assets/php/bonus/pagination.php")?>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="assets/js/tp.js"></script>
 </body>
 </html>

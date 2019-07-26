@@ -76,4 +76,24 @@ body caption {
 body .calendar {
   margin-top: 20px;
 }
+
+body .bonus a {
+  text-decoration: none;
+  background-color: white;
+  padding: 10px;
+}
+
+body .bonus a:hover {
+  color: red;
+}
+
+body .bonus .page {
+  background-color: #525552 !important;
+  color: white;
+}
+
+body .bonus .active {
+  background-color: grey;
+  color: black;
+}
 /*# sourceMappingURL=style.css.map */
