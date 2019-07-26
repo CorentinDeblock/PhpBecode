@@ -11,16 +11,20 @@ class Element {
         $this->content = $content;
     }
 
+    public function render(){
+        echo $this->getFullContent();
+    }
+
     public function setElement($element){
         $this->element = $element;
     }
 
     public function getFullContent(){
-        return '<'.$this->element.$this->attribute.'>'.($this->container ? $this->content : htmlentities($this->content,ENT_HTML5,"ISO-8859-1",true)).'</'.$this->element.'>';
+        return '<'.$this->element.$this->attribute.'>'.($this->container ? $this->content : $this->encoding($this->content)).'</'.$this->element.'>';
     }
 
     public function addAttribute($attribute,$content){
-        $this->attribute .= ' '.$attribute.($content != "" ? '='.htmlentities($content,ENT_HTML5,"ISO-8859-1",true) : "");
+        $this->attribute .= ' '.$attribute.($content != "" ? '="'.$content.'"' : "");
     }
 
     public function getContent() {
@@ -29,6 +33,10 @@ class Element {
 
     public function addContent($content) {
         $this->content .= $content;
+    }
+
+    private function encoding($content) {
+        return htmlentities($content,ENT_HTML5 | ENT_QUOTES,"UTF-8",true);
     }
 
     public function getElement(){

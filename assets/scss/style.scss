@@ -1,3 +1,4 @@
+$bg-content: #353835;
 body{
     background-color: #235668;
     .chapitre{
@@ -6,7 +7,7 @@ body{
         background-color: antiquewhite;
         border-radius: 2pc;
         .content{
-            background-color: #353835;
+            background-color: $bg-content;
             margin:20px;
             color:white;
             text-align: center;
@@ -59,7 +60,22 @@ body{
     .calendar{
         margin-top:20px;
     }
-    .select{
-        
+    .bonus{
+        a{
+            text-decoration:none;
+            background-color:white;
+            padding:10px;
+            &:hover{
+                color:red;
+            }
+        }
+        .page{
+            background-color:#525552;
+            color:white;
+        }
+        .active{
+            background-color:grey !important;
+            color:red;
+        }
     }
 }

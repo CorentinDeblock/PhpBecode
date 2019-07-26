@@ -1,5 +1,6 @@
 <?php 
 @include("../dependance/framework.php");
+setlocale(LC_ALL,"fr_FR");
 
 $dayWeek = array();
 $month = date("m",time())  + 1;
