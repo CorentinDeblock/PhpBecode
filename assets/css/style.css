@@ -1,5 +1,5 @@
 body {
-  background-color: #235668;
+  background-color: #235668 !important;
 }
 
 body .chapitre {
@@ -28,15 +28,19 @@ body .chapitre h3 {
   text-align: center;
 }
 
-body .chapitre .container {
+body .chapitre .boxExe {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-body .margin {
+body .padding {
   padding: 10px;
+}
+
+body .lcd {
+  text-align: right;
 }
 
 body .link {
@@ -71,6 +75,10 @@ body caption {
   color: black;
   background-color: white;
   padding: 5px;
+  caption-side: top;
+  -webkit-box-shadow: 0px 0px 6px 0px grey inset;
+          box-shadow: 0px 0px 6px 0px grey inset;
+  text-align: center;
 }
 
 body .calendar {
@@ -95,5 +103,21 @@ body .bonus .page {
 body .bonus .active {
   background-color: grey !important;
   color: red;
+}
+
+body .bonus .animal-content .img-animal {
+  width: 60%;
+}
+
+body .bonus .animal-content p {
+  padding-top: 30px;
+}
+
+body .control h4 {
+  font-size: 3vw;
+}
+
+body .control p {
+  font-size: 1.6vw;
 }
 /*# sourceMappingURL=style.css.map */

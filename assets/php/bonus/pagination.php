@@ -123,13 +123,17 @@
     $div->addContent(linkID(">","arrowRight")->getFullContent());
     $div->render();
 
+    $divContent = new Element("div","",true);
+    $divContent->addAttribute("class","pt-4");
+
     for($i = ($id - 1) * 4 ;$i < ($id * 4 < count($contenu) ? $id * 4 : count($contenu));$i++) {
         $title = new Element("h3",$contenu[$i +1 ]["titre"]);
         $text = new Element("strong",$contenu[$i + 1]["letexte"]);
         $date = new Element("p",$contenu[$i + 1]["ladate"]);
 
-        $title->render();
-        $text->render();
-        $date->render();
+        $divContent->addContent($title->getFullContent());
+        $divContent->addContent($text->getFullContent());
+        $divContent->addContent($date->getFullContent());
     }
+    $divContent->render();
 ?>

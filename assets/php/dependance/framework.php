@@ -1,10 +1,11 @@
 <?php
 class Element {
-    function __construct($element,$str,$container = false){
+    function __construct($element,$str,$container = false,$single = false){
         $this->content = $str;
         $this->element = $element;
         $this->attribute = "";
         $this->container = $container;
+        $this->single = $single;
     }
 
     public function setContent($content){
@@ -20,7 +21,9 @@ class Element {
     }
 
     public function getFullContent(){
-        return '<'.$this->element.$this->attribute.'>'.($this->container ? $this->content : $this->encoding($this->content)).'</'.$this->element.'>';
+        return '<'.$this->element.$this->attribute.(!$this->single ? '>'.
+        ($this->container ? $this->content : $this->encoding($this->content)) 
+        .'</'.$this->element.'>' : "/>");
     }
 
     public function addAttribute($attribute,$content){
@@ -53,8 +56,9 @@ class Element {
     private $container;
 }
 
-function createElement($balise,$str){
-    $element = new Element($balise,$str);   
+function createElement($balise,$str,$class = ""){
+    $element = new Element($balise,$str);
+    ($class != "" ? $element->addAttribute("class",$class) : "");
     return $element->getFullContent();
 }
 
