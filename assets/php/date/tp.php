@@ -11,10 +11,11 @@ function getTime($month,$year){
     return strftime("%B %G",mktime(0,0,0,$month,0,$year));
 }
 
-if(isDefined($_POST,"month")){
+if(isDefined($_POST,"month"))
     $month = $_POST["month"];
-}
+
 $yearVal = date("Y",time());
+
 if(isDefined($_POST,"year"))
     $yearVal = $_POST["year"];
 
@@ -25,7 +26,7 @@ $indexWeek = 0;
 $start = false;
 
 $table = new Element("table","",true);
-$caption = new Element("caption",$year);
+$caption = new Element("caption",$year,false,false,"ISO-8859-1");
 $thead = new Element("thead","",true);
 $tbody = new Element("tbody","",true);
 

@@ -3,7 +3,7 @@
 
 for($i = 1; $i <= 12;$i++){
     $acMonth = strftime("%B",mktime(0,0,0,$i + 1,0,1900));
-    $option = new Element("option",$acMonth);
+    $option = new Element("option",$acMonth,false,false,"ISO-8859-1");
     $option->addAttribute("value",$i + 1);
     if($i == date("m",time())){
         $option->addAttribute("selected","");

@@ -1,11 +1,12 @@
 <?php
 class Element {
-    function __construct($element,$str,$container = false,$single = false){
+    function __construct($element,$str,$container = false,$single = false,$encode = "UTF-8"){
         $this->content = $str;
         $this->element = $element;
         $this->attribute = "";
         $this->container = $container;
         $this->single = $single;
+        $this->encode = $encode;
     }
 
     public function setContent($content){
@@ -39,7 +40,7 @@ class Element {
     }
 
     private function encoding($content) {
-        return htmlentities($content,ENT_HTML5 | ENT_QUOTES,"UTF-8",true);
+        return htmlentities($content,ENT_HTML5 | ENT_QUOTES,$this->encode,true);
     }
 
     public function getElement(){
